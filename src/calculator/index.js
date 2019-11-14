@@ -1,8 +1,7 @@
+const subtrair = (a, b) => a - b
+const somar = (a, b) => a + b
+
 module.exports = {
-  somar: (a, b) => {
-    return a + b
-  },
-  subtrair: (a, b) => {
-    return a - b
-  }
+  somar,
+  subtrair
 }
