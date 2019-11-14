@@ -1,0 +1,21 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./node_modules",
+    "setup": "yarn clean && yarn",
+    "test": "jest",
+    "tdd": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^24.0.23",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  }
+}
