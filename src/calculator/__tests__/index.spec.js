@@ -27,8 +27,11 @@ describe('Módulo: [ calculator ]', () => {
       expect(calculadora.somar(3.33, -3.33)).toBe(0)
       done()
     })
-    it('Cenario 6: -3.331 + 3.33 = 0', done => {
-      expect(calculadora.somar(3.331, -3.33)).toBe(0.01)
+  })
+
+  describe('Funcionalidade: [ subtrair ]', () => {
+    it('Cenario 1: 2 - 2 = 0', done => {
+      expect(calculadora.subtrair(2, 2)).toBe(0)
       done()
     })
   })
