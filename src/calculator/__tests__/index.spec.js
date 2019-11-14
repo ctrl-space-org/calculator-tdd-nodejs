@@ -35,13 +35,18 @@ describe('Módulo: [ calculator ]', () => {
       done()
     })
 
-    it('Cenario 1: 2 - -2 = 4', done => {
+    it('Cenario 2: 2 - -2 = 4', done => {
       expect(calculadora.subtrair(2, -2)).toBe(4)
       done()
     })
 
-    it('Cenario 1: null - 2 = 2', done => {
+    it('Cenario 3: null - 2 = 2', done => {
       expect(calculadora.subtrair(2, null)).toBe(2)
+      done()
+    })
+
+    it('Cenario 4:  2 - undefined = 2', done => {
+      expect(calculadora.subtrair(2, undefined)).toBe(2)
       done()
     })
   })
