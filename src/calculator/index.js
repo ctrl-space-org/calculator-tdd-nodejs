@@ -17,6 +17,7 @@ const addition = (a = 0, b = 0) => a + b
  * @returns {number} result
  */
 const division = (a = 0, b = 0) => {
+  if (b === 0) throw new Error('InvalidParameterException - Divisão por 0.')
   return a / b
 }
 
