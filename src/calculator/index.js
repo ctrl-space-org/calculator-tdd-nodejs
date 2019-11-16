@@ -16,7 +16,7 @@ const addition = (a = 0, b = 0) => a + b
  * @param {number} b num2
  * @returns {number} result
  */
-const division = (a, b) => {
+const division = (a = 0, b = 0) => {
   return a / b
 }
 

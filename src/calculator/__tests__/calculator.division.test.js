@@ -51,5 +51,12 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+    it('num1 undefined e num2 inteiro positivo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(division(undefined, 4)).toBe(0)
+        done()
+      })
+    })
   })
 })
