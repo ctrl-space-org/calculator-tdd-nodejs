@@ -1,7 +1,7 @@
 const { division } = require('../')
 
 describe('[ Calculator ]', function() {
-  it('divisio method exists', async () => {
+  it('division method exists', async () => {
     expect.hasAssertions()
     await new Promise(done => {
       expect(division).toBeDefined()
@@ -66,6 +66,14 @@ describe('[ Calculator ]', function() {
     it('num1 positivo e num2 zero, esperado erro divisao por 0.', async () => {
       expect.hasAssertions()
       expect(() => division(4, 0)).toThrow('InvalidParameterException')
+    })
+
+    it('num1 e num2 fracionários positivos', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(division(4.22, 2.5)).toBe(1.688)
+        done()
+      })
     })
   })
 })
