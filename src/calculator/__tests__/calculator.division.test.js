@@ -58,16 +58,12 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
-    describe('num1 inteiro positivo e num2 undefined', () => {
-      it('esperado erro divisao por 0.', async () => {
-        expect.hasAssertions()
-        expect(() => division(4, undefined)).toThrow(
-          'InvalidParameterException'
-        )
-      })
+    it('num1 inteiro positivo e num2 undefined', () => {
+      expect.hasAssertions()
+      expect(() => division(4, undefined)).toThrow('InvalidParameterException')
     })
 
-    it('esperado erro divisao por 0.', async () => {
+    it('num1 positivo e num2 zero, esperado erro divisao por 0.', async () => {
       expect.hasAssertions()
       expect(() => division(4, 0)).toThrow('InvalidParameterException')
     })
