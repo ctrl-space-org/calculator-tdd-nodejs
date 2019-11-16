@@ -23,6 +23,7 @@
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true, "semi": false }],
     "eqeqeq": ["error", "always"],
+    "require-jsdoc": "error",
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",

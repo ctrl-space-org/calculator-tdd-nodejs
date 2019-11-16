@@ -1,4 +1,4 @@
-const calculadora = require('../')
+const { subtraction } = require('../')
 
 // # Think
 describe('[ calculadora ]', () => {
@@ -6,7 +6,7 @@ describe('[ calculadora ]', () => {
     it('números inteiros iguais', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(2, 2)).toBe(0)
+        expect(subtraction(2, 2)).toBe(0)
         done()
       })
     })
@@ -14,7 +14,7 @@ describe('[ calculadora ]', () => {
     it('números inteiros iguais mas um negativo', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(2, -2)).toBe(4)
+        expect(subtraction(2, -2)).toBe(4)
         done()
       })
     })
@@ -22,7 +22,7 @@ describe('[ calculadora ]', () => {
     it('um número null e um número inteiro positivo', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(null, 2)).toBe(-2)
+        expect(subtraction(null, 2)).toBe(-2)
         done()
       })
     })
@@ -30,7 +30,7 @@ describe('[ calculadora ]', () => {
     it('um número undefined e um número inteiro positivo', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(2, undefined)).toBe(2)
+        expect(subtraction(2, undefined)).toBe(2)
         done()
       })
     })
@@ -38,7 +38,7 @@ describe('[ calculadora ]', () => {
     it('um número inteiro positivo e um valor undefined', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(undefined, 2)).toBe(-2)
+        expect(subtraction(undefined, 2)).toBe(-2)
         done()
       })
     })
@@ -46,7 +46,7 @@ describe('[ calculadora ]', () => {
     it('dois números com valor undefined', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(undefined, undefined)).toBe(0)
+        expect(subtraction(undefined, undefined)).toBe(0)
         done()
       })
     })
@@ -54,7 +54,7 @@ describe('[ calculadora ]', () => {
     it('um número undefined e outro null', async () => {
       expect.hasAssertions()
       await new Promise(done => {
-        expect(calculadora.subtraction(undefined, null)).toBe(0)
+        expect(subtraction(undefined, null)).toBe(0)
         done()
       })
     })
