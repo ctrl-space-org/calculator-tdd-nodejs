@@ -66,5 +66,10 @@ describe('[ Calculator ]', function() {
         )
       })
     })
+
+    it('esperado erro divisao por 0.', async () => {
+      expect.hasAssertions()
+      expect(() => division(4, 0)).toThrow('InvalidParameterException')
+    })
   })
 })
