@@ -16,5 +16,12 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+    it('dois números inteiros, um negativo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(division(2, -2)).toBe(-1)
+        done()
+      })
+    })
   })
 })
