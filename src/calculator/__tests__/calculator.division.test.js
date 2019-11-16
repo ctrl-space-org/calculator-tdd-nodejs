@@ -37,5 +37,12 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+    it('dois números inteiros, num1 > num2', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(division(4, -2)).toBe(-2)
+        done()
+      })
+    })
   })
 })
