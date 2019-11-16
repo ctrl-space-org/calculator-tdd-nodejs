@@ -1,0 +1,38 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "plugins": ["prettier", "jsdoc", "jest"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "prettier/standard",
+    "plugin:jsdoc/recommended",
+    "plugin:jest/all"
+  ],
+  "globals": {
+    "jest": true,
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true, "semi": false }],
+    "eqeqeq": ["error", "always"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "complexity": ["error", 7],
+    "jsdoc/valid-types": 1,
+    "jsdoc/check-tag-names": 0,
+    "no-console": "warn",
+    "no-alert": "warn",
+    "no-debugger": "error"
+  }
+}

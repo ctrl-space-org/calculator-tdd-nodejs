@@ -1,11 +1,15 @@
-const subtrair = (a, b) => {
-  if (b === undefined) return a
-  if (a === undefined) return b
-  return a - b
-}
-const somar = (a, b) => a + b
+const subtraction = (a = 0, b = 0) => a - b
+
+/**
+ * Método de somar
+ *
+ * @param {number} a num1
+ * @param {number} b num2
+ * @returns {number} result
+ */
+const addition = (a = 0, b = 0) => a + b
 
 module.exports = {
-  somar,
-  subtrair
+  addition,
+  subtraction
 }

@@ -1,0 +1,51 @@
+{
+  "opts": {
+    "template": "node_modules/better-docs",
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "recurse": true
+  },
+  "tags": {
+    "allowUnknownTags": ["category", "swagger", "code", "mermaid"]
+  },
+  "source": {
+    "include": ["src"],
+    "exclude": ["node_modules"]
+  },
+  "plugins": [
+    "plugins/markdown",
+    "jsdoc-mermaid",
+    "node_modules/better-docs/category"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "staticFiles": {
+        "include": ["./docs-src"]
+      }
+    },
+    "better-docs": {
+      "name": "Documentação Exemplo Chassis",
+      "logo": "images/logo.png",
+      "navigation": [
+        {
+          "label": "Github",
+          "href": "https://github.com/SoftwareBrothers/admin-bro"
+        },
+        {
+          "label": "Ambiente Dev",
+          "href": "https://github.com/SoftwareBrothers/admin-bro"
+        },
+        {
+          "label": "Ambiente Prod",
+          "href": "https://github.com/SoftwareBrothers/admin-bro"
+        },
+        {
+          "label": "Swagger",
+          "href": "https://github.com/SoftwareBrothers/admin-bro"
+        }
+      ]
+    }
+  }
+}

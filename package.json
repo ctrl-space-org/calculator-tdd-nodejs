@@ -7,7 +7,8 @@
     "clean": "rm -rf ./node_modules",
     "setup": "yarn clean && yarn",
     "test": "jest",
-    "tdd": "jest --watchAll"
+    "jsdoc": "cross-env jsdoc -c jsdoc.json",
+    "tdd": "jest --watch-all jest --collect-coverage --update-snapshot --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,22 @@
     "express": "^4.17.1",
     "jest": "^24.9.0",
     "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "better-docs": "^1.4.3",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-jsdoc": "^18.0.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jsdoc": "^3.6.3",
+    "jsdoc-mermaid": "^1.0.0",
+    "prettier": "^1.19.1"
   }
 }
