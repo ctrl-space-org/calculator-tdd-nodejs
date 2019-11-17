@@ -45,4 +45,18 @@ describe(`route /addition`, function() {
         })
     })
   })
+
+  it('dois números formato string', async function() {
+    expect.hasAssertions()
+    await new Promise(done => {
+      request(app)
+        .post('/')
+        .send({ num1: '2', num2: '3' })
+        .end(function(err, res) {
+          expect(res.status).toBe(200)
+          expect(res.body.result).toBe(5)
+          done()
+        })
+    })
+  })
 })
