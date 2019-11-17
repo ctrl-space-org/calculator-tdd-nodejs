@@ -6,12 +6,12 @@
   "scripts": {
     "clean": "rm -rf ./node_modules",
     "setup": "yarn clean && yarn",
-    "test": "jest",
-    "jsdoc": "cross-env jsdoc -c jsdoc.json",
-    "tdd": "jest --watch-all --collect-coverage --collectCoverageFrom='src/**/*.{js,jsx}' --update-snapshot --detectOpenHandles",
     "start": "node ./server.js",
+    "start:dev": "nodemon --exec \"yarn start\" ",
+    "test": "jest -c='./jest.config.json'",
+    "tdd": "jest --watch-all --collect-coverage --collectCoverageFrom='src/**/*.{js,jsx}' --update-snapshot --detectOpenHandles",
     "swagger-doc": "node_modules/swagger-jsdoc/bin/swagger-jsdoc.js -d swaggerDef.js",
-    "start:dev": "nodemon --exec \"yarn start\" "
+    "jsdoc": "cross-env jsdoc -c jsdoc.json"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +39,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "express-swagger-generator": "^1.1.15",
     "jest": "^24.9.0",
+    "jest-runner-eslint": "^0.7.5",
     "jsdoc": "^3.6.3",
     "jsdoc-mermaid": "^1.0.0",
     "nodemon": "^1.19.4",
