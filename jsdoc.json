@@ -22,7 +22,7 @@
     "monospaceLinks": false,
     "default": {
       "staticFiles": {
-        "include": ["./docs-src"]
+        "include": ["./static/docs-src"]
       }
     },
     "better-docs": {
