@@ -32,18 +32,6 @@
         {
           "label": "Github",
           "href": "https://github.com/SoftwareBrothers/admin-bro"
-        },
-        {
-          "label": "Ambiente Dev",
-          "href": "https://github.com/SoftwareBrothers/admin-bro"
-        },
-        {
-          "label": "Ambiente Prod",
-          "href": "https://github.com/SoftwareBrothers/admin-bro"
-        },
-        {
-          "label": "Swagger",
-          "href": "https://github.com/SoftwareBrothers/admin-bro"
         }
       ]
     }
