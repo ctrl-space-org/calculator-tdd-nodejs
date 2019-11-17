@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./node_modules",
-    "setup": "yarn clean && yarn",
+    "preinstall": "cross-env rm -rf ./node_modules",
     "start": "node ./server.js",
-    "start:dev": "nodemon --exec \"yarn start\" ",
-    "test": "./node_modules/.bin/jest --logHeapUsage --runInBand -c=jest.config.json",
-    "tdd": "./node_modules/.bin/jest --watchAll --collect-coverage --collectCoverageFrom='src/**/*.{js,jsx}' --update-snapshot --detectOpenHandles",
-    "swagger-doc": "node_modules/swagger-jsdoc/bin/swagger-jsdoc.js -d swaggerDef.js",
+    "start:dev": "cross-env nodemon --exec \"yarn start\" ",
+    "test": "cross-env ./node_modules/.bin/jest --logHeapUsage --runInBand -c=jest.config.json",
+    "tdd": "cross-env ./node_modules/.bin/jest --watchAll --collect-coverage --collectCoverageFrom='src/**/*.{js,jsx}' --update-snapshot --detectOpenHandles",
+    "swagger-doc": "cross-env node_modules/swagger-jsdoc/bin/swagger-jsdoc.js -d swaggerDef.js",
     "jsdoc": "cross-env jsdoc -c jsdoc.json"
   },
   "keywords": [],
