@@ -28,7 +28,7 @@ const division = (a = 0, b = 0) => {
   return a / b
 }
 
-const multiplication = (a = 0, b) => {
+const multiplication = (a = 0, b = 0) => {
   return a * b
 }
 
