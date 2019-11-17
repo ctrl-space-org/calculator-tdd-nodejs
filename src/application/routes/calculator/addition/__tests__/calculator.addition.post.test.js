@@ -5,13 +5,14 @@ const app = require('../../../../../../server')
 app.use(routes)
 
 describe(`route /addition`, function() {
-  it('empty request', async function() {
+  it('request vazio', async function() {
     expect.hasAssertions()
     await new Promise(done => {
       request(app)
         .post('/')
         .end(function(err, res) {
           expect(res.status).toBe(200)
+          expect(res.body.result).toBe(0)
           done()
         })
     })
@@ -26,6 +27,20 @@ describe(`route /addition`, function() {
         .end(function(err, res) {
           expect(res.status).toBe(200)
           expect(res.body.result).toBe(5)
+          done()
+        })
+    })
+  })
+
+  it('dois números inteiros negativos', async function() {
+    expect.hasAssertions()
+    await new Promise(done => {
+      request(app)
+        .post('/')
+        .send({ num1: -12, num2: -3 })
+        .end(function(err, res) {
+          expect(res.status).toBe(200)
+          expect(res.body.result).toBe(-15)
           done()
         })
     })

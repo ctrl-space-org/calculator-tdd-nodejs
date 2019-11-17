@@ -1,0 +1,14 @@
+{
+  "info": {
+    "title": "TDD Microservice Calculator",
+    "version": "1.0.0",
+    "description": "Microservice em NodeJS para estudos de TDD Localiza"
+  },
+  "swagger": "2.0",
+  "paths": {},
+  "definitions": {},
+  "responses": {},
+  "parameters": {},
+  "securityDefinitions": {},
+  "tags": []
+}

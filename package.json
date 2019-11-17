@@ -9,7 +9,8 @@
     "test": "jest",
     "jsdoc": "cross-env jsdoc -c jsdoc.json",
     "tdd": "jest --watch-all jest --collect-coverage --update-snapshot --detectOpenHandles",
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "swagger-doc": "node_modules/swagger-jsdoc/bin/swagger-jsdoc.js -d swaggerDef.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,9 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "pino": "^5.13.6"
+    "pino": "^5.13.6",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.1.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
@@ -33,6 +36,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "express-swagger-generator": "^1.1.15",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.3",
     "jsdoc-mermaid": "^1.0.0",
