@@ -1,5 +1,5 @@
 const app = require('express')()
 
-app.listen(() => {
-  console.log('hey john')
+app.listen(port => {
+  console.log('Calculator service running.')
 })
