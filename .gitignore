@@ -4,3 +4,4 @@ coverage
 coverage/*
 docs
 docs/*
+swagger.json
