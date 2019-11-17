@@ -8,7 +8,8 @@
     "setup": "yarn clean && yarn",
     "test": "jest",
     "jsdoc": "cross-env jsdoc -c jsdoc.json",
-    "tdd": "jest --watch-all jest --collect-coverage --update-snapshot --detectOpenHandles"
+    "tdd": "jest --watch-all jest --collect-coverage --update-snapshot --detectOpenHandles",
+    "start": "node ./server.js"
   },
   "keywords": [],
   "author": "",

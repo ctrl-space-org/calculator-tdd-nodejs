@@ -13,5 +13,71 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+
+    it('números inteiros, num1 positivo, num2 negativo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(2, -2)).toBe(-4)
+        done()
+      })
+    })
+
+    it('números inteiros, num1 negativo, num2 negativo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(-2, -2)).toBe(4)
+        done()
+      })
+    })
+
+    it('números inteiros, num1 undefined, num2 negativo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(undefined, -2)).toBe(-0)
+        done()
+      })
+    })
+
+    it('números inteiros, num1 negativo, num2 undefined', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(-2, undefined)).toBe(-0)
+        done()
+      })
+    })
+
+    it('números inteiros, num1 undefined, num2 undefined', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(undefined, undefined)).toBe(0)
+        done()
+      })
+    })
+
+    it('números fracionários, num1, num2 ambos positivos', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(3.33, 3)).toBe(9.99)
+        done()
+      })
+    })
+
+    it('números fracionários, num1 negativo, num2 positivo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(-3.33, 3)).toBe(-9.99)
+        done()
+      })
+    })
+
+    it('números fracionários, num1 positivo, num2 1e-15', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(-3.33, 0.000000000000001)).toBe(
+          -3.3300000000000005e-15
+        )
+        done()
+      })
+    })
   })
 })
