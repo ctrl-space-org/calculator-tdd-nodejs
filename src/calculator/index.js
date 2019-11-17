@@ -28,8 +28,13 @@ const division = (a = 0, b = 0) => {
   return a / b
 }
 
+const multiplication = (a, b) => {
+  return a * b
+}
+
 module.exports = {
   addition,
   subtraction,
-  division
+  division,
+  multiplication
 }
