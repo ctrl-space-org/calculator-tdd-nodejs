@@ -53,5 +53,13 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+
+    it('números fracionários, num1, num2 ambos positivos', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(3.33, 3)).toBe(9.99)
+        done()
+      })
+    })
   })
 })
