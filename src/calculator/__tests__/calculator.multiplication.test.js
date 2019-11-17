@@ -45,5 +45,13 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+
+    it('números inteiros, num1 undefined, num2 undefined', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(undefined, undefined)).toBe(0)
+        done()
+      })
+    })
   })
 })
