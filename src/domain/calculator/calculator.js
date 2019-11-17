@@ -14,7 +14,7 @@ const subtraction = (a = 0, b = 0) => a - b
  * @param {number} b num2
  * @returns {number} result
  */
-const addition = (a = 0, b = 0) => a + b
+const addition = (a = 0, b = 0) => Number(a) + Number(b)
 
 /**
  * Método de divisão
