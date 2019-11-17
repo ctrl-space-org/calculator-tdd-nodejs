@@ -13,5 +13,13 @@ describe('[ Calculator ]', function() {
         done()
       })
     })
+
+    it('números inteiros, num1 positivo, num2 negativo', async () => {
+      expect.hasAssertions()
+      await new Promise(done => {
+        expect(multiplication(2, -2)).toBe(-4)
+        done()
+      })
+    })
   })
 })
