@@ -8,7 +8,7 @@
     "setup": "yarn clean && yarn",
     "test": "jest",
     "jsdoc": "cross-env jsdoc -c jsdoc.json",
-    "tdd": "jest --watch-all jest --collect-coverage --update-snapshot --detectOpenHandles",
+    "tdd": "jest --watch-all --collect-coverage --collectCoverageFrom='src/**/*.{js,jsx}' --update-snapshot --detectOpenHandles",
     "start": "node ./server.js",
     "swagger-doc": "node_modules/swagger-jsdoc/bin/swagger-jsdoc.js -d swaggerDef.js",
     "start:dev": "nodemon --exec \"yarn start\" "
