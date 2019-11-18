@@ -26,6 +26,7 @@ app.use(bodyParser.json())
 // @ts-ignore
 if (require.main === module) {
   app.use('/', require('./src/application/routes'))
+  // app.use('')
   app.listen(3000, (req, res) => {
     logger.info('Listening on port', 3000)
   })
