@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "cross-env rm -rf node_modules && cross-env rm -rf coverage && cross-env rm -rf docs && cross-env rm -f ./swagger.yml",
     "postinstall": "yarn jsdoc && yarn swagger-doc",
     "start": "node ./server.js",
     "start:dev": "cross-env nodemon --exec \"yarn start\" ",
